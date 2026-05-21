@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>APP Form</title>
+
+  <!-- Home Screen / App Icon -->
+  <link rel="apple-touch-icon" href="app-icon.png" />
+  <link rel="icon" type="image/png" href="app-icon.png" />
+
+  <!-- Mobile App Look -->
+  <meta name="theme-color" content="#7A1E1E" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="APP Form" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <style>
+    :root {
+      --primary: #7A1E1E;
+      --primary-dark: #4F1111;
+      --gold: #C8A24A;
+      --text: #222;
+      --light: #f7f4ef;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.88)),
+        radial-gradient(circle at top, #ffffff 0%, #f2ede5 45%, #ddd4c7 100%);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 430px;
+      background: var(--white);
+      border-radius: 22px;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      padding: 28px 22px;
+      text-align: center;
+      color: white;
+      border-bottom: 5px solid var(--gold);
+    }
+
+    .logo-wrap {
+      width: 112px;
+      height: 112px;
+      margin: 0 auto 16px;
+      border-radius: 26px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+    }
+
+    .logo-wrap img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 0.5px;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      font-size: 15px;
+      opacity: 0.92;
+    }
+
+    .content {
+      padding: 28px 24px 26px;
+      text-align: center;
+    }
+
+    .content p {
+      margin: 0 0 22px;
+      font-size: 16px;
+      line-height: 1.45;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      padding: 17px 18px;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 14px;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 7px 16px rgba(122,30,30,0.28);
+    }
+
+    .button:active {
+      transform: scale(0.98);
+    }
+
+    .instructions {
+      margin-top: 24px;
+      padding: 16px;
+      background: var(--light);
+      border-radius: 14px;
+      text-align: left;
+      font-size: 14px;
+      line-height: 1.45;
+      border-left: 4px solid var(--gold);
+    }
+
+    .instructions strong {
+      color: var(--primary-dark);
+    }
+
+    .footer {
+      padding: 14px 20px 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <section class="header">
+      <div class="logo-wrap">
+        <img src="app-icon.png" alt="APP Icon" />
+      </div>
+      <h1>APP Form</h1>
+      <div class="subtitle">American Piping Products</div>
+    </section>
+
+    <section class="content">
+      <p>
+        Use this shortcut to quickly access the company form from your phone.
+      </p>
+
+      <a
+        class="button"
+        href="PASTE-YOUR-MICROSOFT-FORM-LINK-HERE"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Open Form
+      </a>
+
+      <div class="instructions">
+        <strong>To add this to your phone:</strong><br><br>
+        <strong>iPhone:</strong> Open this page in Safari, tap Share, then choose Add to Home Screen.<br><br>
+        <strong>Android:</strong> Open this page in Chrome, tap the three dots, then choose Add to Home screen.
+      </div>
+    </section>
+
+    <section class="footer">
+      Save this page to your home screen for quick access.
+    </section>
+  </main>
+</body>
+</html>
