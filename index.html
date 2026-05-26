@@ -4,186 +4,95 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>APP Form</title>
+  <title>Employee Discipline Form</title>
 
-  <!-- Home Screen / App Icon -->
-  <link rel="apple-touch-icon" href="app-icon.png" />
-  <link rel="icon" type="image/png" href="app-icon.png" />
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="icon" type="image/png" href="icon.png">
 
-  <!-- Mobile App Look -->
-  <meta name="theme-color" content="#7A1E1E" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-title" content="APP Form" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Discipline Form">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#0f2f57">
 
   <style>
-    :root {
-      --primary: #7A1E1E;
-      --primary-dark: #4F1111;
-      --gold: #C8A24A;
-      --text: #222;
-      --light: #f7f4ef;
-      --white: #ffffff;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      min-height: 100vh;
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.88)),
-        radial-gradient(circle at top, #ffffff 0%, #f2ede5 45%, #ddd4c7 100%);
-      color: var(--text);
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 24px;
+      text-align: center;
+      color: #1f2933;
     }
 
     .card {
-      width: 100%;
-      max-width: 430px;
-      background: var(--white);
-      border-radius: 22px;
-      box-shadow: 0 18px 45px rgba(0,0,0,0.18);
-      overflow: hidden;
-      border: 1px solid rgba(0,0,0,0.08);
-    }
-
-    .header {
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      padding: 28px 22px;
-      text-align: center;
-      color: white;
-      border-bottom: 5px solid var(--gold);
-    }
-
-    .logo-wrap {
-      width: 112px;
-      height: 112px;
-      margin: 0 auto 16px;
-      border-radius: 26px;
       background: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+      padding: 34px;
+      border-radius: 24px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.14);
+      max-width: 340px;
+      width: 82%;
     }
 
-    .logo-wrap img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
+    .icon-button {
+      border: none;
+      background: transparent;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .icon-button img {
+      width: 150px;
+      height: 150px;
+      border-radius: 32px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+      margin-bottom: 20px;
     }
 
     h1 {
-      margin: 0;
-      font-size: 28px;
-      letter-spacing: 0.5px;
+      font-size: 22px;
+      margin: 0 0 10px;
     }
 
-    .subtitle {
-      margin-top: 8px;
+    p {
       font-size: 15px;
-      opacity: 0.92;
+      color: #52606d;
+      margin: 0 0 18px;
     }
 
-    .content {
-      padding: 28px 24px 26px;
-      text-align: center;
-    }
-
-    .content p {
-      margin: 0 0 22px;
-      font-size: 16px;
-      line-height: 1.45;
-    }
-
-    .button {
-      display: block;
-      width: 100%;
-      padding: 17px 18px;
-      background: var(--primary);
-      color: white;
-      text-decoration: none;
-      border-radius: 14px;
-      font-size: 18px;
+    .open-text {
       font-weight: bold;
-      box-shadow: 0 7px 16px rgba(122,30,30,0.28);
+      color: #0f2f57;
+      margin-top: 4px;
     }
 
-    .instructions {
-      margin-top: 24px;
-      padding: 16px;
-      background: var(--light);
-      border-radius: 14px;
-      text-align: left;
-      font-size: 14px;
-      line-height: 1.45;
-      border-left: 4px solid var(--gold);
-    }
-
-    .footer {
-      padding: 14px 20px 20px;
-      text-align: center;
+    .note {
       font-size: 12px;
-      color: #777;
+      color: #7b8794;
+      margin-top: 20px;
     }
   </style>
-
-  <script>
-    const FORM_URL = "https://forms.office.com/Pages/ResponsePage.aspx?id=0oJwgH5NfEu1B-9keMtcqpnsWoUqr0ZGkWvqEUbsW0JUMThBWFY5U1dZR01MTFZEWENNREFIV1pJUC4u";
-
-    function isRunningFromHomeScreen() {
-      return window.navigator.standalone === true ||
-             window.matchMedia("(display-mode: standalone)").matches;
-    }
-
-    window.addEventListener("DOMContentLoaded", function () {
-      if (isRunningFromHomeScreen()) {
-        setTimeout(function () {
-          window.location.href = FORM_URL;
-        }, 900);
-      }
-    });
-  </script>
 </head>
 
 <body>
-  <main class="card">
-    <section class="header">
-      <div class="logo-wrap">
-        <img src="app-icon.png" alt="APP Icon" />
-      </div>
-      <h1>APP Form</h1>
-      <div class="subtitle">American Piping Products</div>
-    </section>
+  <div class="card">
+    <button class="icon-button" onclick="openForm()" aria-label="Open Employee Discipline Form">
+      <img src="icon.png" alt="Employee Discipline Form Icon">
+    </button>
 
-    <section class="content">
-      <p>
-        Add this page to your phone home screen first. After it is saved, tapping the icon will open the form.
-      </p>
+    <h1>Employee Discipline Form</h1>
+    <p>Tap the icon to open the form.</p>
+    <p class="open-text">Open Form</p>
 
-      <a class="button" href="https://forms.office.com/Pages/ResponsePage.aspx?id=0oJwgH5NfEu1B-9keMtcqpnsWoUqr0ZGkWvqEUbsW0JUMThBWFY5U1dZR01MTFZEWENNREFIV1pJUC4u">
-        Open Form
-      </a>
+    <p class="note">Add this page to your home screen before opening the form.</p>
+  </div>
 
-      <div class="instructions">
-        <strong>iPhone setup:</strong><br>
-        Open this page in Safari, tap Share, then choose Add to Home Screen.<br><br>
-        <strong>Android setup:</strong><br>
-        Open this page in Chrome, tap the three dots, then choose Add to Home screen.
-      </div>
-    </section>
-
-    <section class="footer">
-      After the shortcut is added, use the home-screen icon.
-    </section>
-  </main>
+  <script>
+    function openForm() {
+      window.location.href = "https://forms.office.com/Pages/ResponsePage.aspx?id=0oJwgH5NfEu1B-9keMtcqpnsWoUqr0ZGkWvqEUbsW0JUMThBWFY5U1dZR01MTFZEWENNREFIV1pJUC4u";
+    }
+  </script>
 </body>
 </html>
